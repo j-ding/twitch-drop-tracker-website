@@ -356,6 +356,60 @@
   footer a:hover { color: var(--text); }
   .footer-links { display: flex; gap: 1.5rem; }
 
+  /* — PRIVACY POLICY — */
+  .privacy-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5vw 2rem;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+  .privacy-section h2 {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  .privacy-section h2:first-child { margin-top: 0; }
+  .privacy-section h3 {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 1.25rem 0 0.75rem 0;
+  }
+  .privacy-section ul, .privacy-section ol {
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .privacy-section li {
+    margin-bottom: 0.5rem;
+  }
+  .privacy-section p {
+    margin-bottom: 0.75rem;
+  }
+  .privacy-section strong { color: var(--text); }
+  .privacy-section code {
+    background: rgba(145,70,255,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: var(--purple-light);
+    font-size: 14px;
+  }
+  .privacy-section a {
+    color: var(--purple-light);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .privacy-section a:hover {
+    opacity: 0.8;
+  }
+
   /* — RESPONSIVE — */
   @media (max-width: 700px) {
     .hero { padding: 3.5rem 5vw 0; }
@@ -468,32 +522,26 @@
   <p class="section-body">Built to replace Twitch's own drops page with something actually useful.</p>
   <div class="features-grid">
     <div class="feature-card">
-      <div class="feature-icon">⏰</div>
       <div class="feature-title">Sorted by expiration</div>
       <div class="feature-desc">Campaigns are automatically sorted by deadline. Always know which drops need your attention first without digging through Twitch.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🎨</div>
       <div class="feature-title">5-tier urgency colors</div>
       <div class="feature-desc">Red → Orange → Yellow → Blue → Gray. Instantly know how critical each campaign is at a glance — no numbers required.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🎮</div>
       <div class="feature-title">Clickable game icons</div>
       <div class="feature-desc">Click any game thumbnail to jump directly to its Twitch drops page and start earning. One click, no searching.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🔍</div>
       <div class="feature-title">Game filter sidebar</div>
       <div class="feature-desc">Filter to only the games you're actively playing. Searchable, with box art thumbnails, Select All / Deselect All shortcuts.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">📊</div>
       <div class="feature-title">Per-item progress tracking</div>
       <div class="feature-desc">Expand any campaign to see individual reward items, exactly how many minutes you've watched, and how many remain.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🌐</div>
       <div class="feature-title">20 languages</div>
       <div class="feature-desc">Switch languages right in the Settings panel. Supports 20 languages so players worldwide can track their drops comfortably.</div>
     </div>
@@ -530,9 +578,65 @@
   <h2>Start collecting every drop you've earned.</h2>
   <p>Free, fast, and takes 10 seconds to install.</p>
   <a href="https://chromewebstore.google.com/detail/twitch-drops-tracker/hhkbghkcichjongmpfgjoefdlcofdejl" class="btn-install-lg" target="_blank">
-    🎁&nbsp; Add to Chrome — It's Free
+    Add to Chrome — It's Free
   </a>
 </div>
+
+<!-- PRIVACY POLICY -->
+<section class="privacy-section">
+  <h2>Privacy Policy for Twitch Drops Tracker</h2>
+  <p><strong>Last updated:</strong> December 5, 2025</p>
+
+  <h3>Overview</h3>
+  <p>Twitch Drops Tracker is a browser extension that helps you track your Twitch drops campaigns and progress. Your privacy is important to us, and this extension is designed with privacy in mind.</p>
+
+  <h3>Data Collection</h3>
+  <p><strong>We do not collect any personal data.</strong></p>
+  <p>This extension:</p>
+  <ul>
+    <li>Does NOT collect personally identifiable information</li>
+    <li>Does NOT track your browsing activity</li>
+    <li>Does NOT send any data to external servers</li>
+    <li>Does NOT use analytics or tracking services</li>
+    <li>Does NOT sell or share any user data</li>
+  </ul>
+
+  <h3>Data Storage</h3>
+  <p>All data is stored <strong>locally</strong> on your device using Chrome's <code>chrome.storage.local</code> API. This includes:</p>
+  <ul>
+    <li>Cached campaign information</li>
+    <li>Your drop progress data</li>
+    <li>Your inventory data</li>
+  </ul>
+  <p>This data never leaves your browser and is only used to display your drops information within the extension popup.</p>
+
+  <h3>Twitch API Communication</h3>
+  <p>The extension communicates <strong>only</strong> with official Twitch APIs (<code>twitch.tv</code> and <code>gql.twitch.tv</code>) to fetch your drops and campaign data. This is done using your existing Twitch login session and is necessary for the extension to function.</p>
+  <p>No data from these requests is transmitted anywhere other than between your browser and Twitch's servers.</p>
+
+  <h3>Permissions</h3>
+  <p>The extension requires certain permissions to function:</p>
+  <ul>
+    <li><strong>Storage:</strong> To save campaign and progress data locally</li>
+    <li><strong>Cookies:</strong> To read your Twitch authentication for API requests</li>
+    <li><strong>Tabs:</strong> To open Twitch pages when requested</li>
+    <li><strong>Scripting:</strong> To capture drop details from Twitch pages</li>
+    <li><strong>Host permissions (twitch.tv):</strong> To communicate with Twitch's API</li>
+  </ul>
+  <p>These permissions are used solely for the extension's core functionality and not for data collection.</p>
+
+  <h3>Third Parties</h3>
+  <p>This extension does not share any data with third parties. There are no ads, analytics, or external services integrated into this extension.</p>
+
+  <h3>Changes to This Policy</h3>
+  <p>If we make changes to this privacy policy, we will update the "Last updated" date above.</p>
+
+  <h3>Contact</h3>
+  <p>If you have questions about this privacy policy, please open an issue on our GitHub repository: <a href="https://github.com/j-ding/twitch-drop-tracker/issues" target="_blank">https://github.com/j-ding/twitch-drop-tracker/issues</a></p>
+
+  <h3>Open Source</h3>
+  <p>This extension is open source. You can review the complete source code at: <a href="https://github.com/j-ding/twitch-drop-tracker" target="_blank">https://github.com/j-ding/twitch-drop-tracker</a></p>
+</section>
 
 <footer>
   <span>© 2026 Twitch Drops Tracker</span>
