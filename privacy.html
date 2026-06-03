@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Twitch Drop Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --purple: #9146FF;
+    --purple-dark: #7B2FBE;
+    --purple-light: #c084fc;
+    --purple-mid: #b370f5;
+    --bg: #050509;
+    --bg2: #0a0a15;
+    --bg3: #0f0f1e;
+    --text: #f2eeff;
+    --text-muted: #7e74a0;
+    --text-dim: #3a325a;
+    --border: rgba(255,255,255,0.07);
+    --border-bright: rgba(145,70,255,0.28);
+    --gradient: linear-gradient(135deg, #9146FF 0%, #c084fc 100%);
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --r-sm: 8px;
+    --r-md: 12px;
+    --r-lg: 16px;
+    --r-xl: 24px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(145,70,255,0.28); color: var(--text); }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: rgba(145,70,255,0.25); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(145,70,255,0.45); }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 62px;
+    background: rgba(5,5,9,0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-head); font-size: 17px; font-weight: 700;
+    color: var(--text); text-decoration: none;
+    letter-spacing: -0.025em;
+  }
+  .nav-logo img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: color 0.2s; letter-spacing: -0.01em;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .btn-install {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--purple); color: #fff;
+    font-family: var(--font-body); font-size: 13px; font-weight: 600;
+    padding: 8px 18px; border-radius: var(--r-sm); border: none;
+    cursor: pointer; text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    white-space: nowrap; letter-spacing: -0.01em;
+  }
+  .btn-install:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* PRIVACY CONTENT */
+  .privacy-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 5vw 5rem;
+  }
+  .privacy-page h1 {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    line-height: 1.15;
+  }
+  .privacy-page .last-updated {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    display: block;
+  }
+  .privacy-page h2 {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .privacy-page p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0.85rem;
+  }
+  .privacy-page ul, .privacy-page ol {
+    margin-left: 1.5rem;
+    margin-bottom: 0.85rem;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .privacy-page li { margin-bottom: 0.4rem; }
+  .privacy-page strong { color: var(--text); }
+  .privacy-page code {
+    background: rgba(145,70,255,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: var(--purple-light);
+    font-size: 13px;
+  }
+  .privacy-page a {
+    color: var(--purple-light);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .privacy-page a:hover { opacity: 0.75; }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 5vw;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+    color: var(--text-dim); font-size: 13px;
+  }
+  footer a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--text); }
+  .footer-links { display: flex; gap: 1.5rem; }
+
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACAAIADASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAUHBggBAgME/8QARBAAAQMCAgQJBwkHBQAAAAAAAQACAwQFBhEHITE2EhdBUVVxdJOyEzdhsbPR0hUWIiMyNXOEkSViY3KBkqEzQlKUwf/EABoBAQACAwEAAAAAAAAAAAAAAAACBQMEBgH/xAA1EQACAQIBBgwGAwEAAAAAAAAAAQIDBBEFEjNBcZEGExQhMTI0QlFSodEVU3KBscEiYfDx/9oADAMBAAIRAxEAPwDTJERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBF9Fvoqq4VkdHRQST1EpyZGwZklT4wBi8nL5Dn/vZ71lp0KtRYwi3sRONOUuqsTGEXeaN8Mz4pWlr2OLXA8hGohdFiIBERAEREAREQBERAERW1ovwD5LyV7vsH1mp9NSvH2eZ7xz8zf6nmW1Z2dS7qZlP7vwMtGjKtLNiVyzDt/e0ObZLkWuGYIpX6x+i9abCuI56iOFlkuAc9waC+nc1o6yRkB6Vsln6T+qZ+ldIuDVPXUe4s/hkfMYxgLCFJhihzPBnuErcp58tn7reZvrWUMy4besLDtIuNKfDlKaWlLJrpK36DNoiB/3u/8ABy9Syi1yPmtlJLI7hPfBG5xPKS0En9VcWs6FOTt6Pd6f94+JuUpU4vi4ajXy84dv8l3rHsslxc11RIWkUzyCOEdexfJ828Q9BXP/AKr/AHLZbP0rkZ5jWdqqHwbpt48Y9xp/DIvvGqssb4pXxSscyRji1zXDItI2gjnXVSeLN6bt22bxlRi5Kcc2TRUSWDwCIiieBERAFyBmcguFL4LAdi60AgEGti1H+cKUI50lHxPYrF4FjaMMAim8le77DnPqfTUrx/p8z3j/AJcw5Np17JPSZjpljY+12t7ZLo8fTftFODynnfzDk2nmUtpMvVZYsKzVlAWtqHytha8jPgcLPNw9OrUtf2NnrKsNHDmnnkyGZzc9zjznlJK6a+uI5Np8ltl/J9L1/wDfxqLSvUVtHiqfTrZkPz+xfq/bk+r9xnuT5/4vzz+W5/7GZeFfJdsJYitVE+tuFqmp6eMgOe4tyBJyGw86hY2Oke1jAXOcQABylUc7i7pvCcpJ/wBtmhKpWi8G36nerqJ6upkqamV800ji573nMuJ5SVPw46xZDFHFHepmsjaGMAYzIADIDZrXhc8H4kttFLW11pngp4suG9xbk3M5ch5yoJYs6vby6XFvaiONSm9aLH0c4vxJc8ZUNDX3WWenlL+HG5rcjkxxGwatYCuUbQtfdEvnBtnXJ7Ny2CG0LsOD9WdS3k5tvn17EXGTpSlTbbx5zWbFm9N27bN4yoxSeLN6bt22bxlRi4yrpJbWUs+swiIsZEIiIApjBO99n7bF4wodTGCd77P22LxhZKOkjtRKHWRbem7cn85H6nKnMObw23tcXjCuPTduT+cj9TlTmG94bb2uLxhXWXO3LYjdvtPuLu0x7hXD8WL2gVE237wpvxWesK99MYIwDcM2kfWxbR/ECoi2/eFN+Kz1he8Ie2LYvyz3KOmWwv7SpuJdv5W+0ateSth9KrXDAd2zaR9FvJ/EateCnCPtMfp/bGUtKtnuZVol84Ns65PZuWwQ2ha+6JfODbOuT2blsENoVpwb7PL6v0jbybo3t9jWbFm9N27bN4yoxSeLN6bt22bxlRi5CrpJbWU0+swiIsZEIiIApjBO99n7bF4wodTGCd77P22LxhZKOkjtRKHWRbem7cn85H6nKjWktcHNJBBzBHItkcY2CLEln+TZql9O3yrZOGxocdWerI9awziht/TdV3Dfeumyvky5ubnPpxxWC1otLy1q1KmdFcxU81ZVzMLJamaRp1lrpCR/leAJBzGoq3+KG39N1XcN96cUNv6bqu4b71V/BL59z1XuavIa/h6oqiWtq5YzHLVTvYdrXSEg/wCV86t/iht/TdV3DfenFDb+m6ruG+9HkS+fc9V7jkNfw9UYVol84Ns65PZuWwTdo61guF9HNHYb7TXWK6Tzvg4WTHRNaDm0t25+lTuOruLJhWurmv4M3k/Jw/iO1D9NZ/ouiyVRqWFrN11hg2/tgixtISt6TdRYaygsUPbJiW6SMcHNdWTFpGwjhnWo1ck5nNcLiZSzpNlG3i8QiIongREQBe1HUz0dXFV00hjmheHxvA+y4HMFeKInhzoGUcYOMOmpO6j+FOMHGHTUndR/CsXRbPLbn5kt7MvH1PM95lHGDjDpqTuo/hTjBxh01J3UfwrF0Tltz8yW9jj6nme8yjjBxh01J3Ufwpxg4w6ak7qP4Vi6Jy25+ZLexx9TzPeZRxg4w6ak7qP4VH3zE99vlMymulxfUxRv4bWFjWgOyyz1Acih0UZ3VeazZTbW1njqzawcmERFgMYREQBERAEREAREQBERAEREAREQBERAEREB/9k=" alt="Twitch Drop Tracker logo">
+    Twitch Drop Tracker
+  </a>
+  <div class="nav-links">
+    <a href="index.html#screenshots">Screenshots</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#how">How it works</a>
+    <a href="https://chromewebstore.google.com/detail/twitch-drops-tracker/hhkbghkcichjongmpfgjoefdlcofdejl" class="btn-install" target="_blank">Add to Chrome →</a>
+  </div>
+</nav>
+
+<main class="privacy-page">
+  <h1>Privacy Policy</h1>
+  <span class="last-updated">Last updated: December 5, 2025</span>
+
+  <h2>Overview</h2>
+  <p>Twitch Drop Tracker is a browser extension that helps you track your Twitch drops campaigns and progress. Your privacy is important to us, and this extension is designed with privacy in mind.</p>
+
+  <h2>Data Collection</h2>
+  <p><strong>We do not collect any personal data.</strong></p>
+  <p>This extension:</p>
+  <ul>
+    <li>Does NOT collect personally identifiable information</li>
+    <li>Does NOT track your browsing activity</li>
+    <li>Does NOT send any data to external servers</li>
+    <li>Does NOT use analytics or tracking services</li>
+    <li>Does NOT sell or share any user data</li>
+  </ul>
+
+  <h2>Data Storage</h2>
+  <p>All data is stored <strong>locally</strong> on your device using Chrome's <code>chrome.storage.local</code> API. This includes:</p>
+  <ul>
+    <li>Cached campaign information</li>
+    <li>Your drop progress data</li>
+    <li>Your inventory data</li>
+  </ul>
+  <p>This data never leaves your browser and is only used to display your drops information within the extension popup.</p>
+
+  <h2>Twitch API Communication</h2>
+  <p>The extension communicates <strong>only</strong> with official Twitch APIs (<code>twitch.tv</code> and <code>gql.twitch.tv</code>) to fetch your drops and campaign data. This is done using your existing Twitch login session and is necessary for the extension to function.</p>
+  <p>No data from these requests is transmitted anywhere other than between your browser and Twitch's servers.</p>
+
+  <h2>Permissions</h2>
+  <p>The extension requires certain permissions to function:</p>
+  <ul>
+    <li><strong>Storage:</strong> To save campaign and progress data locally</li>
+    <li><strong>Cookies:</strong> To read your Twitch authentication for API requests</li>
+    <li><strong>Tabs:</strong> To open Twitch pages when requested</li>
+    <li><strong>Scripting:</strong> To capture drop details from Twitch pages</li>
+    <li><strong>Host permissions (twitch.tv):</strong> To communicate with Twitch's API</li>
+  </ul>
+  <p>These permissions are used solely for the extension's core functionality and not for data collection.</p>
+
+  <h2>Third Parties</h2>
+  <p>This extension does not share any data with third parties. There are no ads, analytics, or external services integrated into this extension.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If we make changes to this privacy policy, we will update the "Last updated" date above.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions about this privacy policy, please open an issue on our GitHub repository: <a href="https://github.com/j-ding/twitch-drop-tracker/issues" target="_blank">github.com/j-ding/twitch-drop-tracker/issues</a></p>
+
+  <h2>Open Source</h2>
+  <p>This extension is open source. You can review the complete source code at: <a href="https://github.com/j-ding/twitch-drop-tracker" target="_blank">github.com/j-ding/twitch-drop-tracker</a></p>
+</main>
+
+<footer>
+  <span>© 2026 Twitch Drop Tracker</span>
+  <div class="footer-links">
+    <a href="https://chromewebstore.google.com/detail/twitch-drops-tracker/hhkbghkcichjongmpfgjoefdlcofdejl" target="_blank">Chrome Web Store</a>
+    <a href="https://github.com/j-ding" target="_blank">GitHub</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
